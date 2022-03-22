@@ -7,9 +7,10 @@ import { supabase } from "../lib/supabaseClient";
 
 export default function Account({ session }: { session: any }) {
   const [loading, setLoading] = useState<boolean>(true);
-  const [username, setUsername] = useState<string >("");
-  const [website, setWebsite] = useState<string >("");
-  const [avatar_url, setAvatarUrl] = useState<string >("");
+  const [uploading, setUploading] = useState<boolean>(false);
+  const [username, setUsername] = useState<string | null>(null);
+  const [website, setWebsite] = useState<string | null>(null);
+  const [avatar, setAvatar] = useState<string | null>(null);
 
   useEffect(() => {
     getProfile();
