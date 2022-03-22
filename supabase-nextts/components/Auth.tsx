@@ -1,12 +1,7 @@
 import { useState } from "react";
 import { supabase } from "../lib/supabaseClient";
 
-export type Error = {
-  error_description: string;
-  message: string;
-};
-
-export default function Auth() {
+export default function Auth({}) {
   const [loading, setLoading] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
 
