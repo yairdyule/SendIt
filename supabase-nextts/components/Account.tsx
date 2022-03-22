@@ -1,6 +1,9 @@
-import { useState, useEffect } from "react";
-import { supabase } from "../utils/supabaseClient";
-import { Error } from "./Auth";
+import { useState, useEffect, ChangeEvent } from "react";
+// import UploadButton from '../components/UploadButton'
+// import Avatar from './Avatar'
+import { AuthSession } from "@supabase/supabase-js";
+import { Profile, Error, DEFAULT_AVATARS_BUCKET } from "../lib/constants";
+import { supabase } from "../lib/supabaseClient";
 
 export default function Account({ session }: { session: any }) {
   const [loading, setLoading] = useState<boolean>(true);

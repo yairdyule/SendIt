@@ -3,9 +3,8 @@ import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import Account from "../components/Account";
 import Auth from "../components/Auth";
-import { supabase } from "../utils/supabaseClient";
-
-export type Profile = any;
+import { supabase } from "../lib/supabaseClient";
+import { Profile, Error } from "../lib/constants";
 
 const Home: NextPage = () => {
   const [session, setSession] = useState<AuthSession | null>(null);
